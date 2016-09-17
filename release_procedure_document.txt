@@ -1,0 +1,59 @@
+/*
+ * リリース手順書
+ * author: sofukuda
+ * updated date: 2016-09-17
+ */
+
+1. 前提条件
+
+  1.1 環境
+  ・UIサーバ
+    サーバ名: http://organic-kitchen.sakura.ne.jp/
+    ログインコマンド: ssh -l organic-kitchen organic-kitchen.sakura.ne.jp
+    パスワード: 別途連絡
+  ・DBサーバ
+    ホスト名: mysql435.db.sakura.ne.jp
+    ログインコマンド: mysql -h mysql435.db.sakura.ne.jp -u organic-kitchen -p
+    パスワード: 別途連絡
+
+  1.2 リリース前作業
+  ・UIサーバ上の不要なファイルを全て削除する
+  ・DBをクリーニングする
+  ・システムユーザをDBに登録する
+
+2. リリース手順
+
+  2.1 UIサーバにログインし、/home/organic-kitchen以下にバックアップ用ディレクトリを作成する
+    コマンド: mkdir release_20160918
+
+  2.2 2.1で作成したバックアップディレクトリに/home/organic-kitchen/www/dev以下のソースコードをコピーする
+    コマンド: cp -r ./* ../../release_20160918/
+
+  2.3 dev以下のlogic, viewディレクトリをwww以下に移す
+    コマンド: cp -r logic ../
+    コマンド: cp -r view ../
+  
+  2.4 /home/organic-kitchen以下にシステムディレクトリを作成する
+    コマンド: mkdir sys
+  
+  2.5 dev/sys以下のdecide_weekly_order_batch.phpを2.4で作成したシステムディレクトリ以下にコピーする
+    コマンド: cp ./decide_weekly_order_batch.php ../../../sys/
+  
+  2.6 cronの設定を以下の内容に書き換える
+    コマンド: crontab -e
+    内容: 0 10 * * 4 cd /home/organic-kitchen/sys; /usr/local/bin/php decide_weekly_order_batch.php
+  
+3. リリース後対応
+
+  3.1 adminユーザを登録する
+    admin権限が必要なユーザ（Organic Kitchen社の担当者、システム担当者）を登録する
+
+  3.2 企業情報を登録する
+    Organic Kitchen社から受け取った企業情報をDBに登録する
+  
+  3.3 挙動を確認する
+    3.3.1 UIを操作してシステム要件が満たされているかどうか確認する（開発担当者）
+    3.3.2 ビジネス要件が満たされているかどうか確認する（Organic Kitchen社の担当者）
+
+  3.4 gitで管理する
+    開発に必要となったソースコード、その他の資料を全てgit上にコミットする
