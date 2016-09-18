@@ -187,8 +187,8 @@ function _sendMail($sendMailAddress, $msg) {
     mb_internal_encoding('UTF-8');
     $mailto  = $sendMailAddress;
     $subject = "注文確定メール";
-    $headers = "From: <test.organic.kitchen@gmail.com> \n";
-    $headers .= "Reply-To: <test.organic.kitchen@gmail.com> \n";
+    $headers = "From: <info@organic-kitchen.co.jp> \n";
+    $headers .= "Reply-To: <info@organic-kitchen.co.jp> \n";
     return mb_send_mail($mailto, $subject, $msg, $headers);
 }
 
