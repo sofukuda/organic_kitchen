@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>オーガニックキッチン発注画面</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my-custom.css" rel="stylesheet">
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+    <nav class="navbar navbar-default navbar-fixed-top" >
+      <div class="container-fluid">
+      <!-- ヘッダー部分 ================ -->
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#">ORGANIC KITCHEN</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      <!-- 中央のナビゲーション部分 ================ -->
+        <div class="collapse navbar-collapse" id="nav_target">
+
+      <!-- 右寄せになる部分 ================ -->
+          <ul class="nav navbar-nav navbar-right">
+            <!-- リンクのみ -->
+              <li><a href="#">商品発注</a></li>
+              <li><a href="#">定期発注</a></li>
+
+            <!-- Nav6 ドロップダウン -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">その他 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">購入履歴</a></li>
+                  <li><a href="#">契約情報</a></li>
+                  <li><a href="#">今週のメニュー</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">ログアウト</a></li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+      <!-- <div class="container-fluid">-->
+        <div  class="row">
+            <div >
+            <h2 class="page-header" style="margin-left:30px">注文履歴</h2>
+            <p style="margin-left:30px">注文内容の確認・数量の変更が行えます。</p>
+            <div class="container">
+
+              <!-- フォームの開始-->
+              <div class="container col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 ">
+                <form>
+
+                  <!-- セレクト-->
+
+                      <!--<label>password</label>-->
+                      <div class="select-box01">
+                        <label>月を選択する</label>
+                        <select>
+                        <option value="">2016年5月</option>
+                        <option value="">2016年4月</option>
+                      </select>
+                    </div>
+                    <div class="select-box01">
+                      <label>日付を選択する</label>
+                      <select>
+                      <option value="">5月1日</option>
+                      <option value="">5月2日</option>
+                    </select>
+                  </div>
+                    <div>
+                      <!--<label>password</label>-->
+                      <div class="select-box01">
+                        <label style="padding-top:10px;">配送先を選択する</label>
+                        <select>
+                        <option value="">ミッドタウン</option>
+                        <option value="">六本木ヒルズ</option>
+                      </select>
+                    </div>
+                    </div>
+
+                    <!--テーブル-->
+
+                    <table class="table" style="margin-top:20px;">
+                      <thead>
+                        <tr>
+                          <th>品目</th>
+                          <th>個数</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>マクロ</td>
+                            <td><input type="number" placeholder="0" min="0" class="form-control"></input></td>
+                        </tr>
+                        <tr>
+                            <td>肉</td>
+                            <td><input type="number" placeholder="0" min="0" class="form-control"></input></td>
+                        </tr>
+                        <tr>
+                            <td>魚</td>
+                            <td><input type="number" placeholder="0" min="0" class="form-control"></input></td>
+                        </tr>
+                        <tr>
+                            <td>カレー</td>
+                            <td><input type="number" placeholder="0" min="0" class="form-control"></input></td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <a href="URL" target="_blank">商品単価の確認はこちら</a>
+
+                  <table class="table table-bordered" style="margin-top:20px;">
+                    <thead>
+                      <tr>
+                        <th>項目名</th>
+                        <th>金額</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>商品合計</td>
+                          <td>0</td>
+                      </tr>
+                      <tr>
+                          <td>送料</td>
+                          <td>0</td>
+                      </tr>
+
+                    </tbody>
+                </table>
+
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">注文内容を変更する</button>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">発注をキャンセル</button>
+                </form>
+                </div>
+
+
+
+      </div>
+      </div>
+
+
+      <div id = "push"></div>
+
+      <div id = "footer" >
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12 ">
+					<div class="container">
+
+						<p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016
+						<a href="#">ORGANIC KITCHEN</a>. All rights reserved.
+          </div>
+          </div>
+          </div>
+			</div>
+
+  </div>
+  </body>
+
+</html>

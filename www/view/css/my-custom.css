@@ -1,0 +1,140 @@
+/*このCSSは、bootstrapでは出来ないことを記載するもの*/
+
+
+
+/*最大サイズの指定*/
+html {
+  max-width: 100%;
+/*  margin: 0 auto;  */
+}
+
+header.jumbotron  {
+  background-color: blue;
+  height: 50px;
+}
+/* select のデザイン */
+.select-box01 select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+
+.select-box01 select {
+	width: 100%;
+	padding: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 1px solid #999;
+	background: #eee;
+	background: url("../images/arrow.png") right 50% no-repeat, -webkit-linear-gradient(top, #fff 0%,#efebe1 100%);
+	background: url("../images/arrow.png") right 50% no-repeat, linear-gradient(to bottom, #fff 0%,#efebe1 100%);
+	background-size: 20px, 100%;
+
+}
+
+
+
+/* ナビゲーションバーをfixにする際のずれ防止 */
+html,
+body {
+  margin-top: 15px;
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+/* Wrapper for page content to push down footer */
+
+.container-fluid,
+.row{
+  max-width:1200px
+}
+
+.row{
+  margin-right:  auto;
+  margin-left:  auto;
+}
+
+.container2{
+  margin-right:  auto;
+  margin-left:  auto;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  /*   margin: 0 auto -60px;*/
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+
+/* input用 */
+input {padding-top: 40px;}
+
+
+/* cardデザイン用 */
+.card {
+  width: 360px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+  margin: 5px;
+}
+.card-img {
+  max-width: 100%;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+.card-content {
+  padding: 15px 0 15px 10;
+}
+.card-title {
+  font-size: 20px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+
+}
+.card-text {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card-link {
+  text-align: center;
+  border-top: 1px solid #eee;
+
+}
+.card-link a {
+  display:block;
+  text-decoration: none;
+  color: #0bd;
+  margin: 0 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+.card-link a:hover {
+  color: #0090aa;
+
+}
