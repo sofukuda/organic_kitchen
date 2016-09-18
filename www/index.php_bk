@@ -1,0 +1,4 @@
+<?php
+
+header('location: ./dev/view/login.php');
+exit();
