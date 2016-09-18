@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>オーガニックキッチン発注画面</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my-custom.css" rel="stylesheet">
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      <!-- ヘッダー部分 ================ -->
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#">ORGANIC KITCHEN</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      <!-- 中央のナビゲーション部分 ================ -->
+        <div class="collapse navbar-collapse" id="nav_target">
+
+      <!-- 右寄せになる部分 ================ -->
+          <ul class="nav navbar-nav navbar-right">
+            <!-- リンクのみ -->
+              <li><a href="#">商品発注</a></li>
+              <li><a href="#">定期発注</a></li>
+
+            <!-- Nav6 ドロップダウン -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">その他 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">購入履歴</a></li>
+                  <li><a href="#">契約情報</a></li>
+                  <li><a href="#">今週のメニュー</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">ログアウト</a></li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+      <!-- <div class="container-fluid">-->
+        <div  class="row">
+            <div >
+            <h2 class="page-header" style="margin-left:30px">商品価格</h2>
+            <div class="container">
+
+
+              <div class="container col-md-5 col-sm-5 ">
+
+                    <!--テーブル-->
+
+                    <table class="table" style="padding-top:10px;">
+                      <thead>
+                        <tr>
+                          <th>品目</th>
+                          <th>個数</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>マクロ</td>
+                            <td>420</td>
+                        </tr>
+                        <tr>
+                            <td>肉</td>
+                            <td>420</td>
+                        </tr>
+                        <tr>
+                            <td>魚</td>
+                            <td>420</td>
+                        </tr>
+                        <tr>
+                            <td>カレー</td>
+                            <td>420</td>
+                        </tr>
+                      </tbody>
+                  </table>
+
+                  <div >
+                    <label>送料について</label>
+                    <p>一律5000円</p>
+                  </div>
+
+                </div>
+
+
+
+      </div>
+      </div>
+
+
+      <div id = "push"></div>
+
+      <div id = "footer" >
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12 ">
+					<div class="container">
+
+						<p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016
+						<a href="#">ORGANIC KITCHEN</a>. All rights reserved.
+          </div>
+          </div>
+          </div>
+			</div>
+
+  </div>
+  </body>
+
+</html>
